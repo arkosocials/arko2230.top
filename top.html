@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Music with Mute Button</title>
+    <style>
+        #muteButton {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <audio id="backgroundMusic" src="pow.mp3" autoplay loop hidden></audio>
+    <button id="muteButton" onclick="toggleMute()">Mute</button>
+
+    <script>
+        function toggleMute() {
+            var audio = document.getElementById('backgroundMusic');
+            var button = document.getElementById('muteButton');
+            if (audio.muted) {
+                audio.muted = false;
+                button.textContent = 'Mute';
+            } else {
+                audio.muted = true;
+                button.textContent = 'Unmute';
+            }
+        }
+    </script>
+</body>
+</html>
