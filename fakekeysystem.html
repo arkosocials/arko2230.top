@@ -39,6 +39,7 @@ local info = Instance.new("TextLabel")
 ArkosAuth.Name = "ArkosAuth"
 ArkosAuth.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ArkosAuth.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ArkosAuth.IgnoreGuiInset = true
 
 maingui.Name = "maingui"
 maingui.Parent = ArkosAuth
@@ -315,7 +316,7 @@ local function BQMWT_fake_script() -- TextButton.LocalScript
 			wait(3)
 			script.Parent.Parent.Parent.Parent.checking.info.Text = "This might take a while..."
 			wait(3)
-			script.Parent.Parent.Parent.Parent.checking.info.Text  = fake_message
+			script.Parent.Parent.Parent.Parent.checking.info.Text  = Fake_Message
 		else
 			script.Parent.Parent.Parent.Parent.checking.info.Text  = "Invalid key! Returning back..."
 			wait(1)
